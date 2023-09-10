@@ -1,0 +1,128 @@
+
+/* The outermost border is 2px whereas the border after it (black one) is 10px. */
+.outer-border {
+    border: 2px solid white;
+    width:90%;
+    position: relative;
+}
+.inner-border {
+    border: 10px solid #000;
+    position: relative;
+    width:90%;
+}
+.wrapper
+{
+    display:flex;
+    flex-flow:row wrap;
+    text-align: center;
+}
+
+.wrapper
+{
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+/* The height of first & second rows are 90 & 80 px respectively. */
+.blue-box
+{
+    background-color:#5A95E2;
+    height: 90px;
+    flex: 1 100%;
+}
+.second-row
+{
+    flex:1 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* In the second row, each box is 25% wide. */
+
+.box1
+ {
+    background-color:#E87B43;
+    order:1;
+    flex:0 25%;
+    height:80px;
+}
+.box2 
+{
+    background-color:#784100;
+    order:2;
+    flex: 0 25%;
+    height: 80px;
+}
+.box3
+{
+    background-color:#FF7499;
+    order:3;
+    flex: 0 25%;
+    height: 80px;
+}
+.box4
+{
+    background-color:#5A5AB2;
+    order:4;
+    flex: 0 25%;
+    height: 80px;
+}
+
+ .third-row
+{
+    /* initial size is set to occupy 100% of the available space within the flex container. */
+    flex: 0 0 100%; /* Change flex-grow, flex-shrink, and flex-basis */
+    display: flex;
+    background:black;
+    height: 400px;
+}
+
+/* The two columns (purple & grey) are 12.5% wide. */
+
+.box-a
+ {
+    background-color:#CD94E1;
+    order:1;
+    flex:0 12.5%;
+    height:400px;
+}
+.box-b
+{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background:black;
+    order:2;
+    flex: 0 85%;
+    height: 400px;
+}
+/* The size of box in the middle is 120x120px. */
+.box-c
+{
+    background-color:#7F6800;
+    border: 2px solid white;
+    order:3;
+
+    /* flex item will have an initial size of 12.5% of the available space, but it won't grow if there's extra space in the container, and it may shrink if necessary. */
+    flex: 0 12.5%;
+    height: 120px;
+    width:120px;
+}
+.box-d
+{
+    background:gray;
+    order:4;
+    flex: 0 12.5%;
+    height: 500px;
+}
+
+/* The height of last row is 100px. */
+.green-box
+{
+   background: #01763B;
+   height: 100px;
+   width:100%;
+   flex: 0 0 88.7%; 
+   /* Change flex-grow, flex-shrink, and flex-basis */
+
+}
